@@ -2,7 +2,7 @@
   <img src="https://img.icons8.com/?size=512&id=55494&format=png" width="100" />
 </p>
 <p align="left">
-    <h1 align="left">API_PLAYWRIGHT_JS_FW</h1>
+    <h1 align="left">Proscenium_API</h1>
 </p>
 <p align="left">
 	<img src="https://img.shields.io/github/license/auttechjuhan/API_Playwright_JS_FW?style=flat&color=0080ff" alt="license">
@@ -15,7 +15,7 @@
 </p>
 <p align="left">
 	<img src="https://img.shields.io/badge/JavaScript-F7DF1E.svg?style=flat&logo=JavaScript&logoColor=black" alt="JavaScript">
-	<img src="https://img.shields.io/badge/GitHub%20Actions-2088FF.svg?style=flat&logo=GitHub-Actions&logoColor=white" alt="GitHub%20Actions">
+	<img src="https://github.com/SpectralAUT/Proscenium_API/actions" alt="GitHub%20Actions">
 	<img src="https://img.shields.io/badge/JSON-000000.svg?style=flat&logo=JSON&logoColor=white" alt="JSON">
 </p>
 <hr>
