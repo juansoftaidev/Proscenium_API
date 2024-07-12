@@ -1,0 +1,24 @@
+{
+  "name": "Proscenium_API",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf allure-report/ && rimraf playwright-report/",
+    "test": "playwright test",
+    "allure-report": "npx allure generate ./allure-results && allure open"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.45.0",
+    "@types/node": "^20.14.9",
+    "allure-commandline": "^2.21.0",
+    "allure-playwright": "^3.0.0-beta.5",
+    "copyfiles": "^2.4.1",
+    "npm-check-updates": "^16.14.20",
+    "rimraf": "^5.0.7",
+    "saucectl": "^0.178.0"
+  }
+}
