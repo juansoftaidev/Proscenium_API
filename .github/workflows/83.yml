@@ -1,0 +1,45 @@
+name: 02_Select Environment at run-time DEV 💻 🔧 🔩 🕳️ 🔋 QA 🔍 🕵️‍♂️ 🔎 💡 👀
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Select environment (DEV | PRE-PROD | PROD)'
+        options:
+          - 'DEV'
+          - 'PRE-PROD'
+          - 'PROD'
+        required: true
+        default: 'PROD'
+        type: choice
+
+jobs:
+
+  api_tests_env_selected:
+
+    timeout-minutes: 30
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+      
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run Playwright API tests on selected environment
+        run: npm run tests:${{ github.event.inputs.environment }}
+
+      - name: Upload Reports
+        uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: API Tests Report
+          path: playwright-report/
+          retention-days: 30
